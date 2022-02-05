@@ -1,0 +1,29 @@
+{
+  "name": "@dxworks/echarts-to-pics",
+  "version": "0.0.0",
+  "description": "Argv a file name containing JSON config objects of graphs, parses it and generate their images",
+  "bin": {
+    "echarts-to-pics": "src/generate-images.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "src/generate-images.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "generate-images"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "echarts": "^5.3.0",
+    "esm": "^3.2.25",
+    "jsdom": "^19.0.0",
+    "ora": "^6.0.1"
+  }
+}
