@@ -1,12 +1,13 @@
 {
   "name": "@dxworks/echarts-to-pics",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "Argv a file name containing JSON config objects of graphs, parses it and generate their images",
   "bin": {
     "echarts-to-pics": "src/generate-images.js"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
   "main": "src/generate-images.js",
