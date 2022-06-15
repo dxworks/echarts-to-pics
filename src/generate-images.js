@@ -19,7 +19,7 @@ var image_size = 1000;
 
 //check command-line args
 const args = process.argv;
-if ((args.length < 5) || (args.length > 6)) {
+if ((args.length < 3) || (args.length > 6)) {
     spinner.stop();
     usage();
     process.exit(1);
@@ -37,7 +37,7 @@ else {
         options = process.argv[5];
     }
     
-    if (!format || (format != 'png' && format != 'jpeg' && format != 'jpg')) {
+    if (!format || (format !== 'png' && format !== 'jpeg' && format !== 'jpg')) {
         spinner.fail(chalk.red(`${format} is not a valid format. Please insert a valid format from: png|jpeg|jpg`))
         process.exit(1)
     }
@@ -61,7 +61,7 @@ else {
 
         //read each folder entry
         for (var i = 0; i < items.length; i++) {
-            if (items[i].substring(items[i].length - 5, items[i].length) != '.json') {
+            if (!items[i].endsWith(".json")) {
                 spinner.warn(chalk.yellow(`Wrong file type at ${items[i]}\n`));
                 continue;
             }
